@@ -4,73 +4,138 @@
     <meta charset="UTF-8">
     <title>Mis Proyectos de Animación</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ── Reset básico ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ── Fondo y fuente general ── */
         body {
             font-family: Arial, sans-serif;
+            background-color: #0a0a1a;
             color: white;
             min-height: 100vh;
             padding: 60px 20px;
+            /* Fondo con degradado animado */
             background: linear-gradient(135deg, #0a0a1a, #1a0a2e, #0a1a2e);
             background-size: 300% 300%;
             animation: fondoAnimado 8s ease infinite;
         }
+
         @keyframes fondoAnimado {
             0%   { background-position: 0% 50%; }
             50%  { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        h1 { text-align: center; font-size: 2.5em; margin-bottom: 10px; color: #00d4ff; }
-        p  { text-align: center; color: #aaaaaa; margin-bottom: 50px; }
-        .proyectos {
-            display: flex; flex-wrap: wrap; justify-content: center;
-            gap: 20px; max-width: 900px; margin: 0 auto;
+
+        /* ── Título principal ── */
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #00d4ff;
         }
+
+        p {
+            text-align: center;
+            color: #aaaaaa;
+            margin-bottom: 50px;
+        }
+
+        /* ── Contenedor de tarjetas ── */
+        .proyectos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ── Cada tarjeta ── */
         .tarjeta {
-            background-color: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px; width: 220px; padding: 24px;
-            text-decoration: none; color: white;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            width: 220px;
+            padding: 24px;
+            text-decoration: none;
+            color: white;
             transition: transform 0.3s, border-color 0.3s;
         }
-        .tarjeta:hover { transform: translateY(-8px); border-color: #00d4ff; }
-        .numero { font-size: 0.75em; color: #aaaaaa; margin-bottom: 8px; }
-        .nombre { font-size: 1.1em; font-weight: bold; }
-        footer { text-align: center; margin-top: 60px; color: #444; font-size: 0.85em; }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            border-color: #00d4ff;
+        }
+
+        .numero {
+            font-size: 0.75em;
+            color: #aaaaaa;
+            margin-bottom: 8px;
+        }
+
+        .nombre {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* ── Pie de página ── */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #444444;
+            font-size: 0.85em;
+        }
     </style>
 </head>
 <body>
+
     <h1>Mis Proyectos de Animación</h1>
     <p>Curso: Animación de Gráficos — Haz clic para ver cada proyecto</p>
+
     <div class="proyectos">
-        <a href="ANIMACION_1/index.html" class="tarjeta">
+
+        <a href="ANIMACION 1/index.html" class="tarjeta">
             <div class="numero">Proyecto 01</div>
             <div class="nombre">Animación 1</div>
         </a>
-        <a href="ANIMACION_2/index.html" class="tarjeta">
+
+        <a href="ANIMACION 2/index.html" class="tarjeta">
             <div class="numero">Proyecto 02</div>
             <div class="nombre">Animación 2</div>
         </a>
-        <a href="ANIMACION_3/index.html" class="tarjeta">
+
+        <a href="ANIMACION 3/index.html" class="tarjeta">
             <div class="numero">Proyecto 03</div>
             <div class="nombre">Animación 3</div>
         </a>
-        <a href="ANIMACION_4/index.html" class="tarjeta">
+
+        <a href="ANIMACION 4/index.html" class="tarjeta">
             <div class="numero">Proyecto 04</div>
             <div class="nombre">Animación 4</div>
         </a>
-        <a href="ANIMACION_5/index.html" class="tarjeta">
+
+        <a href="ANIMACION 5/index.html" class="tarjeta">
             <div class="numero">Proyecto 05</div>
             <div class="nombre">Animación 5</div>
         </a>
-        <a href="ANIMACION_6/index.html" class="tarjeta">
+
+        <a href="ANIMACION 6/index.html" class="tarjeta">
             <div class="numero">Proyecto 06</div>
             <div class="nombre">Animación 6</div>
         </a>
-        <a href="ANIMACION_7/index.html" class="tarjeta">
+
+        <a href="ANIMACION 7/index.html" class="tarjeta">
             <div class="numero">Proyecto 07</div>
             <div class="nombre">Animación 7</div>
         </a>
+
     </div>
+
     <footer>Animación de Gráficos · 2025</footer>
+
 </body>
 </html>
