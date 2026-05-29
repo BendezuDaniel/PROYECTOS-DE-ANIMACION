@@ -1,71 +1,50 @@
 <html>
 <head>
-<title>TURISMO PERÚ</title>
-<style>
-*{
-    padding:0px;
-    margin:0px;
-}
-.contenedor{
-    width: 600px;
-    height:300px;
-    border:1px solid black;
-    margin:0 auto;
-    position: relative;
-    overflow: hidden;
-}
-.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4{
-    width:200px;
-    height:300px;
-    position: absolute;
-    top: 0px;
-    background-size: cover;
-    left: -200px; /* todas empiezan fuera a la izquierda */
-}
-.tarjeta1{
-    background-image: url(img/img01.jpg);    
-    animation: tarjeta1 1s 1 forwards;
-}
-.tarjeta2{
-    background-image: url(img/img02.jpg);    
-    animation: tarjeta2 1s 1 forwards 1s;
-}
-.tarjeta3{
-    background-image: url(img/img03.jpg);    
-    animation: tarjeta3 1s 1 forwards 2s;
-}
-
-
-/* ANIMACIONES DE IZQUIERDA A DERECHA */
-@keyframes tarjeta1{
-    0%  { left: -200px; }
-    100%{ left: 0px; }
-}
-@keyframes tarjeta2{
-    0%  { left: -200px; }
-    100%{ left: 200px; }
-}
-@keyframes tarjeta3{
-    0%  { left: -200px; }
-    100%{ left: 400px; }
-}
-
-/* Hover */
-.tarjeta1:hover,
-.tarjeta2:hover,
-.tarjeta3:hover{
-    transition: 1s;
-    scale: 1.2;
-    z-index: 1;
-}
-
-</style>
+    <title>ANIMACION 2</title>
+    <style>
+        *{ margin:0px; padding:0px; }
+        .contenedor{
+            width:400px; height: 200px;
+            border:1px solid rgb(163, 9, 9);
+            position: relative;
+            margin:0 auto;
+            overflow: hidden;
+            background-image: url(img/campo.jpg);
+            background-size: cover;
+        }
+        .cuadrito{
+            width: 50px; height: 50px;
+            position: absolute;
+            left: -100px; top: 50px;
+            animation: cuadrito 3s infinite;
+        }
+        .cuadrito2{
+            width: 50px; height: 50px;
+            position: absolute;
+            left: -50px; top: 30px;
+            animation: cuadrito 4s infinite;
+        }
+        @keyframes cuadrito{
+            0%{ left: -100px; top: 50px; rotate: 0deg; }
+            50%{ left: 165px; top: 0px; rotate: 60deg; }
+            100%{ left: 400px; top: 150px; rotate: 0deg; }
+        }
+        @keyframes cuadrito2{
+            0%{ left: -50px; top: 0px; rotate: 0deg; }
+            50%{ left: 170px; top: 150px; rotate: 60deg; }
+        }
+        .cuadrito img, .cuadrito2 img{ width: 50px; height: 50px; }
+        .volver{
+            display: block; margin: 20px auto; text-align: center;
+            color: #00d4ff; font-family: Arial;
+        }
+    </style>
 </head>
 <body>
-<div class="contenedor">
-    <div class="tarjeta1"></div>
-    <div class="tarjeta2"></div>
-    <div class="tarjeta3"></div>    
-</div>    
+    <div class="contenedor">
+        <div class="cuadrito"><img src="img/abeja.webp" alt=""></div>
+        <div class="cuadrito2"><img src="img/abejita.png" alt=""></div>
+    </div>
+    <a class="volver" href="../index.html">← Volver al índice</a>
 </body>
 </html>
