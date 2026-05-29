@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>Turismo del Perú</title>
+
+<style>
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: #dcefff;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    width: 800px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TARJETAS */
+
+.tarjeta1,
+.tarjeta2,
+.tarjeta3,
+.tarjeta4{
+
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: -300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* IMAGENES */
+
+.tarjeta1{
+    background-image: url(img/costa.jpg);
+    left: 0px;
+    animation: tarjeta1 3s 1 forwards;
+}
+
+.tarjeta2{
+    background-image: url(img/mar.jpg);
+    left: 200px;
+    animation: tarjeta2 3s 1 forwards 3s;
+}
+
+.tarjeta3{
+    background-image: url(img/selva.jpg);
+    left: 400px;
+    animation: tarjeta3 3s 1 forwards 6s;
+}
+
+.tarjeta4{
+    background-image: url(img/sierra.jpg);
+    left: 600px;
+    animation: tarjeta4 3s 1 forwards 9s;
+}
+
+/* ANIMACIONES */
+
+@keyframes tarjeta1{
+
+    0%{
+        top: -300px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 300px;
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes tarjeta2{
+
+    0%{
+        top: -300px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 300px;
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes tarjeta3{
+
+    0%{
+        top: -300px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 300px;
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes tarjeta4{
+
+    0%{
+        top: -300px;
+        transform: rotateY(180deg);
+    }
+
+    50%{
+        top: 300px;
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+/* EFECTOS HOVER */
+
+.tarjeta1:hover,
+.tarjeta2:hover,
+.tarjeta3:hover,
+.tarjeta4:hover{
+
+    transition: 1s;
+    scale: 1.1;
+    z-index: 2;
+}
+
+/* BANNER */
+
+.banner{
+
+    width: 260px;
+    height: 50px;
+    line-height: 50px;
+
+    background: rgba(0,0,0,0.7);
+    color: white;
+
+    font-size: 22px;
+    font-family: Arial;
+    font-weight: bold;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    position: absolute;
+
+    top: 170px;
+    left: 50%;
+
+    transform: translateX(-50%) scale(0);
+
+    opacity: 0;
+
+    animation: banner 2s forwards;
+    animation-delay: 12s;
+
+    z-index: 5;
+}
+
+/* ANIMACION DEL BANNER */
+
+@keyframes banner{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+
+    50%{
+        transform: translateX(-50%) scale(1.2);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="tarjeta1"></div>
+
+    <div class="tarjeta2"></div>
+
+    <div class="tarjeta3"></div>
+
+    <div class="tarjeta4"></div>
+
+    <div class="banner">
+        LUGARES TURÍSTICOS
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Payaso</title>
+  <style>
+
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+
+    .payaso {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .pelo {
+      width: 90px;
+      height: 90px;
+      background-color: red;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .pelos {
+      display: flex;
+      gap: 100px;
+    }
+
+    .cabeza {
+      width: 260px;
+      height: 260px;
+      background-color: #fddbb4;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: -25px;
+    }
+
+    .ojos {
+      display: flex;
+      gap: 55px;
+    }
+
+    .ojo {
+      width: 45px;
+      height: 45px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .nariz {
+      width: 35px;
+      height: 35px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .boca {
+      width: 110px;
+      height: 35px;
+      background-color: darkred;
+      clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+    }
+
+    .volante {
+      width: 340px;
+      height: 50px;
+      background-color: orange;
+      clip-path: polygon(
+        0% 50%, 10% 0%, 20% 50%, 30% 0%,
+        40% 50%, 50% 0%, 60% 50%, 70% 0%,
+        80% 50%, 90% 0%, 100% 50%,
+        100% 100%, 0% 100%
+      );
+    }
+
+    .cuerpo {
+      width: 240px;
+      height: 220px;
+      background-color: #06d6a0;
+      clip-path: polygon(
+        50% 0%, 100% 25%,
+        100% 75%, 50% 100%,
+        0% 75%, 0% 25%
+      );
+    }
+
+    .piernas {
+      display: flex;
+      gap: 35px;
+    }
+
+    .pierna {
+      width: 50px;
+      height: 110px;
+      background-color: steelblue;
+      border-radius: 10px;
+    }
+
+    .zapatos {
+      display: flex;
+      gap: 15px;
+    }
+
+    .zapato {
+      width: 120px;
+      height: 38px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="payaso">
+    <div class="pelos">
+      <div class="pelo"></div>
+      <div class="pelo"></div>
+    </div>
+    <div class="cabeza">
+      <div class="ojos">
+        <div class="ojo"></div>
+        <div class="ojo"></div>
+      </div>
+      <div class="nariz"></div>
+      <div class="boca"></div>
+    </div>
+    <div class="volante"></div>
+    <div class="cuerpo"></div>
+    <div class="piernas">
+      <div class="pierna"></div>
+      <div class="pierna"></div>
+    </div>
+    <div class="zapatos">
+      <div class="zapato"></div>
+      <div class="zapato"></div>
+    </div>
+  </div>
+
+</body>
+</html>

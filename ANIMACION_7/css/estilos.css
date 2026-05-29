@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    position: relative;
+
+    width: 550px;
+    height: 800px;
+
+    background: #1b1b1b;
+
+    overflow: hidden;
+
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.8);
+}
+
+/* FRANJA 1 */
+
+.franja1{
+    position: absolute;
+
+    width: 800px;
+    height: 180px;
+
+    background: #f1b400;
+
+    top: 470px;
+    left: -120px;
+
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+
+    animation: mover1 5s infinite alternate;
+}
+
+/* FRANJA 2 */
+
+.franja2{
+    position: absolute;
+
+    width: 700px;
+    height: 160px;
+
+    background: rgba(255, 187, 0, 0.25);
+
+    top: 250px;
+    left: -50px;
+
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+
+    animation: mover2 7s infinite alternate;
+}
+
+/* FRANJA 3 */
+
+.franja3{
+    position: absolute;
+
+    width: 700px;
+    height: 180px;
+
+    background: #000;
+
+    top: 560px;
+    left: -100px;
+
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+    animation: mover3 6s infinite alternate;
+}
+
+/* MODELO */
+
+.modelo{
+    position: absolute;
+
+    width: 360px;
+
+    top: 80px;
+    left: -10px;
+
+    z-index: 10;
+
+    animation: flotar 3s ease-in-out infinite alternate;
+}
+
+/* TITULO */
+
+.titulo{
+    position: absolute;
+
+    top: 70px;
+    right: 35px;
+
+    z-index: 20;
+
+    text-align: right;
+
+    animation: titulo 4s ease-in-out infinite alternate;
+}
+
+.titulo h1{
+    color: #f1b400;
+
+    font-size: 55px;
+
+    font-family: Impact;
+}
+
+.titulo h2,
+.titulo h3{
+    color: white;
+
+    font-size: 50px;
+
+    font-family: Impact;
+}
+
+/* CAJA */
+
+.caja{
+    position: absolute;
+
+    width: 230px;
+    height: 320px;
+
+    background: #f1b400;
+
+    left: 30px;
+    bottom: 60px;
+
+    padding: 20px;
+
+    z-index: 15;
+}
+
+.caja h2{
+    margin-bottom: 20px;
+
+    font-size: 28px;
+
+    font-family: Impact;
+}
+
+.caja ul{
+    list-style: none;
+}
+
+.caja ul li{
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer{
+    position: absolute;
+
+    right: 35px;
+    bottom: 110px;
+
+    color: white;
+
+    z-index: 20;
+}
+
+.footer h2{
+    color: #f1b400;
+
+    margin-bottom: 10px;
+
+    font-family: Impact;
+}
+
+.footer p{
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+/* PARALLAX */
+
+@keyframes flotar{
+
+    from{
+        transform: translateY(0px);
+    }
+
+    to{
+        transform: translateY(-20px);
+    }
+
+}
+
+@keyframes mover1{
+
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(30px);
+    }
+
+}
+
+@keyframes mover2{
+
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(-30px);
+    }
+
+}
+
+@keyframes mover3{
+
+    from{
+        transform: translateX(0px);
+    }
+
+    to{
+        transform: translateX(20px);
+    }
+
+}
+
+@keyframes titulo{
+
+    from{
+        transform: translateY(0px);
+    }
+
+    to{
+        transform: translateY(-10px);
+    }
+
+}

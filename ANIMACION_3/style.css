@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background: #f4d83d;
+    overflow: hidden;
+}
+
+/* PALMERA */
+
+.palmera{
+    position: absolute;
+    width: 180px;
+    top: -10px;
+    right: -20px;
+    z-index: 10;
+}
+
+/* TEXTO PRINCIPAL */
+
+.texto1{
+    position: absolute;
+    top: 220px;
+    left: 35px;
+
+    color: white;
+
+    z-index: 5;
+
+    animation: desaparecer1 1s forwards;
+    animation-delay: 4s;
+}
+
+.texto1 h2{
+    color: #4d2b10;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+.texto1 h1{
+    font-size: 65px;
+    line-height: 60px;
+}
+
+/* COCOS */
+
+.coco{
+    position: absolute;
+    width: 120px;
+    z-index: 2;
+}
+
+/* POSICIONES Y MOVIMIENTO */
+
+.coco1{
+    left: -30px;
+    bottom: -200px;
+
+    animation: mover1 5s infinite linear;
+}
+
+.coco2{
+    right: -20px;
+    bottom: -250px;
+
+    animation: mover2 6s infinite linear;
+}
+
+.coco3{
+    left: 100px;
+    bottom: -300px;
+
+    animation: mover3 7s infinite linear;
+}
+
+.coco4{
+    right: 100px;
+    bottom: -350px;
+
+    animation: mover4 8s infinite linear;
+}
+
+/* TEXTO 2 */
+
+.texto2{
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+
+    color: white;
+
+    opacity: 0;
+
+    z-index: 6;
+
+    animation:
+    aparecer 1s forwards,
+    desaparecer2 1s forwards;
+
+    animation-delay: 5s, 8s;
+}
+
+.texto2 h1{
+    font-size: 90px;
+    line-height: 85px;
+}
+
+.texto2 h2{
+    color: #4d2b10;
+    font-size: 70px;
+}
+
+/* COCO GRANDE */
+
+.cocoGrande{
+    position: absolute;
+
+    width: 220px;
+
+    left: 50%;
+    top: 270px;
+
+    transform: translateX(-50%) scale(0);
+
+    z-index: 4;
+
+    animation:
+    aparecerCoco 1s forwards,
+    desaparecer2 1s forwards;
+
+    animation-delay: 5.5s, 8s;
+}
+
+/* VAINILLA */
+
+.vainilla{
+    position: absolute;
+
+    width: 130px;
+
+    left: 180px;
+    top: 420px;
+
+    opacity: 0;
+
+    z-index: 5;
+
+    animation:
+    aparecer 1s forwards,
+    desaparecer2 1s forwards;
+
+    animation-delay: 6s, 8s;
+}
+
+/* LATA FINAL */
+
+.lataFinal{
+    position: absolute;
+
+    width: 220px;
+
+    left: 50%;
+    bottom: -400px;
+
+    transform: translateX(-50%);
+
+    z-index: 8;
+
+    opacity: 0;
+
+    animation: entradaLata 1.5s forwards;
+    animation-delay: 8.5s;
+}
+
+/* ANIMACIONES COCOS */
+
+@keyframes mover1{
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform: translateY(-900px) rotate(360deg);
+    }
+}
+
+@keyframes mover2{
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(-360deg);
+    }
+}
+
+@keyframes mover3{
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform: translateY(-1100px) rotate(360deg);
+    }
+}
+
+@keyframes mover4{
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100%{
+        transform: translateY(-1200px) rotate(-360deg);
+    }
+}
+
+/* APARECER */
+
+@keyframes aparecer{
+
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DESAPARECER */
+
+@keyframes desaparecer1{
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes desaparecer2{
+
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* COCO GRANDE */
+
+@keyframes aparecerCoco{
+
+    0%{
+        transform: translateX(-50%) scale(0);
+    }
+
+    70%{
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    100%{
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* LATA FINAL */
+
+@keyframes entradaLata{
+
+    0%{
+        bottom: -400px;
+        transform: translateX(-50%) scale(0.7);
+        opacity: 0;
+    }
+
+    70%{
+        bottom: 60px;
+        transform: translateX(-50%) scale(1.05);
+        opacity: 1;
+    }
+
+    100%{
+        bottom: 40px;
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
