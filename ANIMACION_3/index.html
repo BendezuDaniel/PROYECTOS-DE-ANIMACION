@@ -1,48 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coco Vainilla</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>ANIMACION 3</title>
+    <style>
+        *{ margin:0px; padding:0px; }
+        .contenedor{
+            width:400px; height: 200px;
+            border:1px solid rgb(163, 9, 9);
+            position: relative;
+            margin:0 auto;
+            overflow: hidden;
+            background-image: url(img/campo.jpg);
+            background-size: cover;
+        }
+        .cuadrito{
+            width: 50px; height: 50px;
+            position: absolute;
+            left: -100px; top: 50px;
+            animation: cuadrito 3s infinite;
+        }
+        .cuadrito2{
+            width: 50px; height: 50px;
+            position: absolute;
+            left: -50px; top: 30px;
+            animation: cuadrito 4s infinite;
+        }
+        @keyframes cuadrito{
+            0%{ left: -100px; top: 50px; rotate: 0deg; }
+            50%{ left: 165px; top: 0px; rotate: 60deg; }
+            100%{ left: 400px; top: 150px; rotate: 0deg; }
+        }
+        @keyframes cuadrito2{
+            0%{ left: -50px; top: 0px; rotate: 0deg; }
+            50%{ left: 170px; top: 150px; rotate: 60deg; }
+        }
+        .cuadrito img, .cuadrito2 img{ width: 50px; height: 50px; }
+        .volver{
+            display: block; margin: 20px auto; text-align: center;
+            color: #00d4ff; font-family: Arial;
+        }
+    </style>
 </head>
 <body>
-
     <div class="contenedor">
-
-        <!-- PALMERA -->
-        <img src="img/palmera.gif" class="palmera">
-
-        <!-- TEXTO PRINCIPAL -->
-        <div class="texto1">
-            <h2>YA PROBASTE</h2>
-            <h1>EL NUEVO<br>SABOR</h1>
-        </div>
-
-        <!-- COCOS FLOTANTES -->
-        <img src="img/coco.png" class="coco coco1">
-        <img src="img/coco1.png" class="coco coco2">
-        <img src="img/coco.png" class="coco coco3">
-        <img src="img/coco1.png" class="coco coco4">
-
-        <!-- TEXTO COCO VAINILLA -->
-        <div class="texto2">
-            <h1>COCO</h1>
-            <h2>+</h2>
-            <h1>VAINILLA</h1>
-        </div>
-
-        <!-- COCO GRANDE -->
-        <img src="img/coco.png" class="cocoGrande">
-
-        <!-- VAINILLA -->
-        <img src="img/vainilla.png" class="vainilla">
-
-        <!-- LATA FINAL -->
-        <img src="img/lata.png" class="lataFinal">
-
+        <div class="cuadrito"><img src="img/abeja.webp" alt=""></div>
+        <div class="cuadrito2"><img src="img/abejita.png" alt=""></div>
     </div>
-
+    <a class="volver" href="../index.html">← Volver al índice</a>
 </body>
 </html>
